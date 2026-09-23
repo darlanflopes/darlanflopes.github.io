@@ -5,66 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Perfil Profissional - Darlan Francisco</title>
+
+    <style type="text/tailwindcss">
+    @layer base {
+      th, td {
+        @apply border border-[#0f0101] p-[12px] text-left bg-sky-200;
+      }
+      img {
+        @apply w-[250px] h-[250px] rounded-full border-[3px] border-[#3498db] text-center;
+      }
+      p {
+        @apply text-xl ;
+      }
+      h2 {
+        @apply text-center text-shadow-lg/30 text-2xl font-bold;
+      }
+      h1 {
+        @apply text-center text-shadow-lg/30 text-5xl font-bold;
+      }
+    
+    }
+    @layer components {
+    /* Aqui configura a div externa, ou seja, o container do grid */
+    .container-habilidades {
+      @apply grid grid-flow-col grid-rows-1 gap-4 auto-rows-max content-center;
+        }
+
+    /* Aqui configura as divs internas, ou seja, os cards de habilidades */
+    .container-habilidades > div {
+      @apply border border-[#0f0101] bg-orange-500 text-[#ddd] py-[8px] px-[15px] rounded-xl;
+        }
+    }
+    </style>
 </head>
-  
-<body class="font-sans m-0 p-[20px] bg-[#f4f4f9] text-[#333]">
-   <header class= "max-w-[800px] mx-[auto] bg-[#f0eeee] p-[20px] mb-[20px]"> 
-        <h1 >Darlan Francisco</h1>
-        <p> Desenvolvedor Web Full Stack</p>
-   </header>
-   <main class="max-w-[800px] mx-auto bg-[#f0eeee] p-[20px] mb-[20px]">
-        <section>
-            <h2>Sobre mim</h2>
-            <figure class="imagem-perfil">
-                <img src="imagens/darlan-trabalho.jpg" alt="Foto de perfil de Darlan." width="250">
-                <figcaption>Darlan em seu ambiente de trabalho</figcaption>
-            </figure>
-            <p>Profissional dedicado com mais de 5 anos de experiência na criação de aplicações web escaláveis, focando em performance, acessibilidade e excelente experiência do usuário.</p>
-        </section>
+    
+    <body class="font-sans m-0 p-[20px] bg-[#f4f4f9] text-[#333]">
+    <header class= "max-w-[800px] mx-[auto] bg-[#f0eeee] p-[20px] mb-[20px]"> 
+            <h1>Darlan Francisco Lopes</h1><br>
+            <p> Técnico em Manutenção e Suporte em informática <br>
+                Técnico em Redes de Computadores <br>
+                Estudante de Análise e Desenvolvimento de Sistemas no IFPE - Campus Palmares
+            </p>
+    </header>
+    <main class="max-w-[800px] mx-auto bg-[#f0eeee] p-[20px] mb-[20px] space-y-8">
+            <section>
+                <h2>Sobre mim</h2><br><br>
+                <figure class="imagem-perfil flex flex-col items-center text-center w-250px">
+                    <img src="imagens/darlan-trabalho.jpg" alt="Foto de perfil de Darlan.">
+                    <figcaption>Darlan em seu ambiente de trabalho</figcaption>
+                </figure><br>
+                <p>Profissional com experiencia em Manutenção e Redes de computadores. Estudante e entusiasta em linguagens de programação como: Java, Python, C++ (utilizado em arduino e ESP32).</p>
+            </section>
 
-        <section>
-            <h2>Habilidades Técnicas</h2>
-            <ul class="lista-habilidades">
-                <li>HTML5 Semântico</li>
-                <li>CSS3 / Flexbox / Grid</li>
-                <li>Javascript (ES6+)</li>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>Git / Github</li>
-            </ul>
-        </section>
+            <section><br>
+                <h2>Habilidades Técnicas</h2><br>
+                <div class="container-habilidades">
+                    <div>HTML5 Semântico</div>
+                    <div>CSS3 / Flexbox / Grid</div>
+                    <div>Python</div>
+                    <div>Node.js</div>
+                    <div>Git / Github</div>
+                </div>
+            </section>
 
-        <section>
-            <h2>Formação Acadêmica</h2>
-            <table>
-                <caption>Histórico de Formação Acadêmica e Certificações</caption>
-                <thead>
-                    <tr>
-                        <th class="border border-[#0f0101] p-[12px] text-left" scope="col">Instituição</th>
-                        <th class="border border-[#0f0101] p-[12px] text-left" scope="col">Curso / Grau</th>
-                        <th class="border border-[#0f0101] p-[12px] text-left" scope="col">Ano de Conclusão</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="border border-[#0f0101] p-[12px] text-left">Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco - Campus Palmares</td>
-                        <td class="border border-[#0f0101] p-[12px] text-left">Curso Técnico em Suporte e Manutenção de Computadores</td>
-                        <td class="border border-[#0f0101] p-[12px] text-left">2017</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-[#0f0101] p-[12px] text-left">Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco - Campus Palmares</td>
-                        <td class="border border-[#0f0101] p-[12px] text-left">Curso Técnico em Redes de Computadores</td>
-                        <td class="border border-[#0f0101] p-[12px] text-left">2019</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-[#0f0101] p-[12px] text-left">Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco - Campus Palmares</td>
-                        <td class="border border-[#0f0101] p-[12px] text-left">Análise e Desenvolvimento de Sistemas</td>
-                        <td class="border border-[#0f0101] p-[12px] text-left">2028</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-   </main>
-   
-</body>
+            <section><br>
+                <h2>Formação Acadêmica</h2><br>
+                <div class="w-full overflow-x-auto border border-black-100 rounded-sm">
+                <table class="w-full border-collapse">
+                    <caption class="text-center font-bold p-2 bg-gray-300 border border-gray-800">Histórico de Formação Acadêmica e Certificações</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Instituição</th>
+                            <th scope="col">Curso / Grau</th>
+                            <th scope="col">Ano de Conclusão</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco - Campus Palmares</td>
+                            <td>Curso Técnico em Suporte e Manutenção de Computadores</td>
+                            <td>2017</td>
+                        </tr>
+                        <tr>
+                            <td>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco - Campus Palmares</td>
+                            <td>Curso Técnico em Redes de Computadores</td>
+                            <td>2019</td>
+                        </tr>
+                        <tr>
+                            <td>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco - Campus Palmares</td>
+                            <td>Análise e Desenvolvimento de Sistemas</td>
+                            <td>2028 (previsão)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </section>
+    </main>
+    
+    </body>
 </html>
