@@ -28,7 +28,7 @@
     @layer components {
     /* Aqui configura a div externa, ou seja, o container do grid */
     .container-habilidades {
-      @apply grid grid-flow-col grid-rows-1 gap-4 auto-rows-max content-center;
+      @apply flex flex-wrap gap-3 justify-center;
         }
 
     /* Aqui configura as divs internas, ou seja, os cards de habilidades */
@@ -47,7 +47,7 @@
                 Estudante de Análise e Desenvolvimento de Sistemas no IFPE - Campus Palmares
             </p>
     </header>
-    <main class="max-w-[800px] mx-auto bg-[#f0eeee] p-[20px] mb-[20px] space-y-8">
+    <main class="w-full max-w-[800px] mx-auto bg-[#f0eeee] p-4 sm:p-[20px] mb-[20px] space-y-8 box-border">
             <section>
                 <h2>Sobre mim</h2><br><br>
                 <figure class="imagem-perfil flex flex-col items-center">
